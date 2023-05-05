@@ -6,7 +6,8 @@
 </head>
 <body>
 <h1>
-    <h1>Welcome</h1>
+    <a href="/register">注册</a>
+    <a href="/login">登陆</a>
 </h1>
 
 </body>

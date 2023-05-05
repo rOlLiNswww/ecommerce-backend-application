@@ -13,13 +13,13 @@ class RegisterController extends BaseController
 
     public function store()
     {
-
         User::create(request()->validate([
             'name' => 'required|max:255',
-            'username'=> 'required',
-            'email' => 'required|email',
+            'username'=> 'required|min:3|unique:users,username',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6'
         ]));
+
         return redirect('/');
 
     }

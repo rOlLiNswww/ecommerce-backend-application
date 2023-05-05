@@ -1,0 +1,90 @@
+body{
+    background: #9ca3af;
+}
+
+a{
+    text-decoration: none;
+}
+
+.darkBox{
+    background-color: #2D3f51;
+    width: 30%;
+    height: 700px;
+    margin-left: 35%;
+}
+
+
+.message{
+    padding-top: 35%;
+    text-align: center;
+    font-size:30px;
+    color: #FF6868;
+}
+
+
+.loginInput{
+    border-radius: 15px;
+    border: 2px solid grey;
+    background: white;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    padding: 14px 10px;
+    width: 250px;
+    outline: none;
+    color: #FF6868;
+    transition: 0.25s;
+}
+/* 设置文本框获得焦点时的样式 */
+.loginInput:focus{
+    width: 280px;
+    border-color: grey;
+    background-color: white;
+
+}
+
+.button{
+    width: 150px;
+    border-radius: 5px;
+    border: 2px solid #2ecc71;
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+    padding: 8px 40px;
+    color: #2ecc71;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.button:hover{
+    background: #2ecc71;
+}
+
+.forget{
+    text-decoration: none;
+    color: #2ecc71;
+    text-align: center;
+    font-size: 10px;
+}
+.google{
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: white;
+    display: block;
+}
+.googleImg{
+    width: 40px;
+    height: 40px;
+    padding-left: 30px;
+}
+
+label{
+    display: block;
+    margin-top: 4%;
+}
+
+
+
+
+

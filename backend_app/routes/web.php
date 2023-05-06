@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -23,12 +24,16 @@ Route::get('/', function () {
 
 Route::get('posts/{post}', [\App\Http\Controllers\PostController::class,'show']);
 
-Route::get('/register',[RegisterController::class,'create']);
+Route::get('/register',[RegisterController::class,'create'])->middleware('guest');
 
-Route::post('/register',[RegisterController::class,'store']);
+Route::post('/register',[RegisterController::class,'store'])->middleware('guest');
+
+Route::post('/logout',[LoginController::class,'destroy']);
 
 Route::get('login',[LoginController::class,'create']);
 
 Route::post('/login',[LoginController::class,'store']);
+
+Route::get('/Home',[HomeController::class,'create']);
 
 

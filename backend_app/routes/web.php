@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $id = request('id');
-    return view('test',['id'=>$id]);
-});
 
+
+Route::get('/', function () {
+    return view('/test');
+});
 
 Route::get('posts/{post}', [\App\Http\Controllers\PostController::class,'show']);
 
@@ -34,6 +35,12 @@ Route::get('login',[LoginController::class,'create']);
 
 Route::post('/login',[LoginController::class,'store']);
 
+Route::get('/Product',[ProductController::class,'create']);
+
+Route::post('/Product',[ProductController::class,'store']);
+
 Route::get('/Home',[HomeController::class,'create']);
+
+
 
 

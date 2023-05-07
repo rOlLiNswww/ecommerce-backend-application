@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function create(){
-        return view('Home');
+        $Products = \App\Models\Product::query()->latest()->get();
+        return view('Home',['Products'=>$Products]);
     }
+
+
 }

@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,7 @@ Route::get('/', function () {
     return view('/test');
 });
 
+
 Route::get('posts/{post}', [\App\Http\Controllers\PostController::class,'show']);
 
 Route::get('/register',[RegisterController::class,'create'])->middleware('guest');
@@ -39,7 +41,19 @@ Route::get('/Product',[ProductController::class,'create']);
 
 Route::post('/Product',[ProductController::class,'store']);
 
+Route::get('/Home/{id}',function ($id){
+  $Product = \App\Models\Product::findOrFail($id);
+  return view('ProductDetail',['Product'=>$Product,'id'=>$id]);
+});
+Route::get('/Home/{id}/edit',[ProductController::class,'edit']);
+
+
+Route::put('/Home/{id}',[ProductController::class,'update']);
+
 Route::get('/Home',[HomeController::class,'create']);
+
+Route::delete('/Home/{id}',[ProductController::class,'destroy']);
+
 
 
 

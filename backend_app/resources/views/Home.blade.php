@@ -8,6 +8,7 @@
 <body>
 <h1>welcome:{{auth()->user()->username}}</h1>
 <a href="/Product">Add Product</a>
+
 @foreach($Products as $Product)
     <section class="productBox">
         <p>Product Name:{{$Product->ProductName}}</p>
@@ -16,7 +17,9 @@
         <p>Size:{{$Product->PSize}}</p>
         <p>Colour:{{$Product->Colour}}</p>
         <p>ProductDescription:{{$Product->ProductDescription}}</p>
+        <a href="/Home/{{$Product->id}}">edit</a>
     </section>
+
 @endforeach
 
 

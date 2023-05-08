@@ -38,7 +38,7 @@ public function edit($id){
      $Product->Colour = request('Colour');
      $Product->ProductDescription = request('ProductDescription');
      $Product->save();
-     return redirect('/Home/'.$Product->id);
+     return redirect('/Home');
 
  }
 

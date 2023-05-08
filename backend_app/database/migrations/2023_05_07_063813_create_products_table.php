@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('ProductName');
             $table->unsignedBigInteger("ProductCode")->unique();
             $table->decimal('Price');
-            $table->unsignedInteger("Size");
+            $table->string("Size");
             $table->string('Colour');
             $table->string('ProductDescription');
             $table->timestamps();

@@ -24,6 +24,15 @@ Route::get('/', function () {
     return view('/test');
 });
 
+Route::get('/search', function () {
+    $Product= Product::latest();
+    if(request('search')){
+
+        $Product->where("ProductName",'like','%'.request('search').'%');
+    }
+    return view('SearchProduct',['Product' => $Product->get()]);
+});
+
 
 Route::get('posts/{post}', [\App\Http\Controllers\PostController::class,'show']);
 
@@ -47,12 +56,11 @@ Route::get('/Home/{id}',function ($id){
 });
 Route::get('/Home/{id}/edit',[ProductController::class,'edit']);
 
-
 Route::put('/Home/{id}',[ProductController::class,'update']);
 
 Route::get('/Home',[HomeController::class,'create']);
 
-Route::delete('/Home/{id}',[ProductController::class,'destroy']);
+Route::delete('/delete/{id}',[ProductController::class,'destroy']);
 
 
 

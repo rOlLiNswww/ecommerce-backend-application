@@ -6,32 +6,42 @@
     <link rel="stylesheet" href="./Home.css">
 </head>
 <body>
-<h1>welcome:{{auth()->user()->username}}</h1>
-<a href="/Product">Add Product</a>
+<h1 class="title">Welcome: {{auth()->user()->email}}</h1>
+<div>
+    <div class="sideBar">
+        <a href="/Product"><div class="add sideBarButton"></div></a>
+
+        <form class="form" method="post" action="/logout">
+            @csrf
+            <button class="exit sideBarButton" type="submit"></button>
+        </form>
+    </div>
+</div>
+
+
+<form action="/search" method="get">
+    <input class="search" type="text" name="search" placeholder="search"/>
+</form>
+
 
 @foreach($Products as $Product)
     <section class="productBox">
-        <p>Product Name:{{$Product->ProductName}}</p>
-        <p>Product Code:{{$Product->ProductCode}}</p>
-        <p>Price:{{$Product->Price}}</p>
-        <p>Size:{{$Product->PSize}}</p>
-        <p>Colour:{{$Product->Colour}}</p>
-        <p>ProductDescription:{{$Product->ProductDescription}}</p>
-        <a href="/Home/{{$Product->id}}">edit</a>
+        <p>Product Name: {{$Product->ProductName}}</p>
+        <p>Product Code: {{$Product->ProductCode}}</p>
+        <p>Price(AUD$): {{$Product->Price}}</p>
+        <p>Size: {{$Product->Size}}</p>
+        <p>Colour: {{$Product->Colour}}</p>
+        <p>ProductDescription: {{$Product->ProductDescription}}</p>
+        <a class="edit" href="/Home/{{$Product->id}}/edit"><img src="./edit.blade.php" alt=""></a>
+
+        <form action="/delete/{{$Product->id}}" method="post">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="deleteBtn">delete</button>
+        </form>
     </section>
 
 @endforeach
 
-
-<h1>
-    @auth
-        <form method="post" action="/logout">
-            @csrf
-            <button type="submit">logout</button>
-        </form>
-    @else
-        <a href="/">登陆失败，点击返回主页</a>
-    @endauth
-</h1>
 </body>
 </html>

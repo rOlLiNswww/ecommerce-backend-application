@@ -1,0 +1,29 @@
+body{
+    background-color: #2D3f51;
+}
+
+.signTitle {
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #2ecc71;
+    margin-left: -0.5%;
+}
+
+.label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #DADCE0;
+    font-size: 16px;
+    transition: 0.5s;
+    z-index: 0;
+    margin-top: -8%;
+}
+
+.inputContainer{
+    position: relative;
+    height: 40px;
+    width: 90%;
+    margin-bottom: 5%;
+    float: left;
+}

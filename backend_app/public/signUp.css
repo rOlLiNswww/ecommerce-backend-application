@@ -32,7 +32,6 @@ body{
     width: 90%;
     margin-bottom: 5%;
     float: left;
-
 }
 
 .input {
@@ -46,7 +45,6 @@ body{
     outline: none;
     background: none;
     z-index: 1;
-
 }
 
 .date {

@@ -1,5 +1,5 @@
 body{
-    background: #9ca3af;
+    background-color: #2D3f51;
 }
 
 a{
@@ -7,18 +7,18 @@ a{
 }
 
 .darkBox{
-    background-color: #2D3f51;
-    width: 30%;
+    background-color: rgba(89,102,114,0.7);
+    width: 35%;
     height: 700px;
     margin-left: 35%;
 }
 
 
 .message{
-    padding-top: 35%;
+    padding-top: 15%;
     text-align: center;
     font-size:30px;
-    color: #FF6868;
+    color: #2ecc71;
 }
 
 
@@ -32,7 +32,7 @@ a{
     padding: 14px 10px;
     width: 250px;
     outline: none;
-    color: #FF6868;
+    color: #2ecc71;
     transition: 0.25s;
 }
 /* 设置文本框获得焦点时的样式 */
@@ -72,9 +72,21 @@ label{
     color: red;
     float: left;
     margin-top: -3%;
-    margin-left: 40%;
+    margin-left: 10%;
 }
 
+
+.signForm {
+    margin-top: 5%;
+    margin-left: 35%;
+    background-color: rgba(89,102,114,0.7);
+    width: 400px;
+    height: 500px;
+    border-radius: 8px;
+    padding: 35px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    float: left;
+}
 
 
 

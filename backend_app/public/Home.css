@@ -1,7 +1,102 @@
+body{
+    background-color: #2D3f51;
+}
+
 .productBox{
+    padding: 20px;
     width: 600px;
-    height: 300px;
-    background-color: #4a5568;
+    height: 308px;
+    background-color: rgba(89,102,114,0.7);
     border-radius: 15px;
     margin-bottom: 1%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 40px;
 }
+
+.link{
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid #2ecc71;
+    display: block;
+    text-align: center;
+    color: #1a202c;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.edit{
+    background-image: url("./editBtn.png");
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    display: block;
+    background-size: 100% 100%;
+    cursor: pointer;
+    float: right;
+    margin-right: -1%;
+}
+
+.title{
+    margin-left: 40px;
+    font-size:40px;
+    color: #2ecc71;
+}
+
+.sideBar{
+    background-color: #1b2a40;
+    width: 7%;
+    height: 200px;
+    margin-left: 92%;
+    margin-top: 8%;
+    position: fixed;
+}
+
+.sideBarButton{
+    width: 60px;
+    height: 50px;
+    margin: 20px 20px;
+    cursor: pointer;
+    background-size: 100% 100%;
+    border: none;
+}
+
+.sideBarButton:hover {
+    box-shadow: 0 16px 32px 0 rgba(48, 55, 66, 0.15);
+    transform: translate(0,-5px);
+    transition-delay: 0s !important;
+}
+
+.add{
+    background-image: url("./plus.png");
+}
+.exit{
+    background-image: url("./exit.png");
+}
+
+.search {
+    background-color: #f3f3f3;
+    width: 300px;
+    height: 40px;
+    border-radius: 18px;
+    outline: none;
+    border: 1px solid #ccc;
+    margin-right: 10%;
+    margin-top: -5%;
+    float: right;
+}
+
+.deleteBtn{
+    display: block;
+    padding: 15px 30px;
+    border: none;
+    background-color: #ef4444;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 7%;
+    margin-top: 5%;
+}
+
+

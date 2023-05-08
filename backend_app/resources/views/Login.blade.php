@@ -6,7 +6,7 @@
     <title>Title</title>
 </head>
 <body>
-<div class="darkBox">
+<div>
     <form action="/login" method="post" class="signForm">
         @csrf
         <p class="message">Welcome to Backend manager</p>
